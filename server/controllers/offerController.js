@@ -19,7 +19,6 @@ export async function getFullOffer(req, res, next) {
         const offer = await Offer.findByPk(id, {
             include: { model: User, as: 'author' }
         });
-
         if (!offer) {
             return next(ApiError.notFound(`Предложение с id ${id} не найдено`));
         }

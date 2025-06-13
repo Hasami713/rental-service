@@ -1,7 +1,10 @@
 import React, {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import App from "./components/app/app";
-import {Settings} from "./const";
+import {offers} from './mocks/offers';
+import {Setting} from './const';
+import {offersList} from "./mocks/offers-list"; // если используешь Setting
+
 
 const container = document.getElementById('root') as HTMLElement;
 
@@ -9,8 +12,9 @@ const root = createRoot(container);
 
 
 root.render(
-    <React.StrictMode>
-        <App
-            rentalOffersCount={Settings.rentOffersCount}/>
-    </React.StrictMode>
+    <StrictMode>
+        <App rentOffersCount={Setting.rentOffersCount}
+             offersList={offersList}
+             offers={offers}/>
+    </StrictMode>
 );

@@ -3,7 +3,6 @@ import sequelize from '../config/database.js';
 import User from "./User.js";
 
 const Offer = sequelize.define('Offer', {
-
     title: {
         type: DataTypes.STRING,
         allowNull: false,
