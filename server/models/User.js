@@ -20,8 +20,6 @@ const User = sequelize.define('User', {
   password: {
     type: DataTypes.STRING,
     allowNull: false,
-
-
   },
   userType: {
     type: DataTypes.ENUM,
@@ -36,5 +34,4 @@ const User = sequelize.define('User', {
   tableName: 'users',
   timestamps: false,
 });
-
 export default User;
